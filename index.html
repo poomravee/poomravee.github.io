@@ -3,111 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f8f7ef">
+  <meta name="theme-color" content="#fcfbf8">
   <meta name="google-site-verification" content="IUVPOqmGA_b7SfYCt6on9UwxGlaMDz49h6-nfST98VU">
   <title>Marcus Chuthamsatid — Analytics, Engineering &amp; Business</title>
-  <meta name="description" content="Marcus Chuthamsatid’s engineering notebook. Explore projects in data, finance, and games alongside his experience at Waterloo and KPMG Thailand.">
+  <meta name="description" content="Marcus Chuthamsatid studies Management Engineering at Waterloo. Try his finance planner and forest game, read about his work, or download his résumé.">
   <link rel="canonical" href="https://marcuschu.me/">
   <link rel="icon" href="assets/mc-wordmark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="fieldnotes.css">
-  <script src="fieldnotes.js" defer></script>
+  <link rel="stylesheet" href="portfolio.css">
   <script src="workbench.js" defer></script>
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
-<header class="mast wrap">
-  <a class="brand" href="#top" aria-label="Marcus Chuthamsatid, home"><b class="stamp" aria-hidden="true">mc</b><span>Engineering notebook</span></a>
-  <nav aria-label="Main navigation"><a href="#project">Projects</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+<header class="page mast">
+  <a class="signature" href="#top">Marcus Chuthamsatid</a>
+  <nav aria-label="Main navigation"><a href="#project">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></nav>
 </header>
 <main id="main">
-  <section class="hero wrap" aria-labelledby="name">
-    <div class="hero-copy">
-      <p class="kicker"><i class="rule" aria-hidden="true"></i>University of Waterloo</p>
-      <h1 id="name">Marcus<br><em>Chuthamsatid</em><span class="name-dot">.</span></h1>
-      <p class="intro">I study Management Engineering at the University of Waterloo. I work where analytics, technology, and business meet.</p>
-      <div class="actions"><a class="action" href="#project">Explore my projects</a><a class="text-link" href="assets/Marcus-Chuthamsatid-Resume.pdf" download>Download résumé</a></div>
-    </div>
-    <figure class="plot" aria-labelledby="plot-title">
-      <figcaption><span class="device-label" id="plot-title"><i class="led" aria-hidden="true"></i>Signal plotter</span><span class="plot-name">Terrain study</span></figcaption>
-      <div class="scope">
-        <img class="plot-fallback" src="assets/notebook/terrain.png" alt="Mint contour lines forming a mountain on a dark green plotting grid." width="540" height="330">
-        <canvas width="1080" height="660" role="img" aria-label="Terrain line drawing"></canvas>
+  <section id="about" class="page intro" aria-labelledby="name">
+    <h1 id="name">Hi, I’m Marcus.</h1>
+    <p>I study Management Engineering at the University of Waterloo. Outside class, I run an online shop selling drinks and workout supplements. I keep track of inventory and pricing in Excel.</p>
+    <p>Last summer I worked on the audit innovation team at KPMG Thailand. One of the things I built was a Power BI report that lets auditors compare sales from one period to the next.</p>
+    <div class="intro-links"><a href="assets/Marcus-Chuthamsatid-Resume.pdf?v=0ea5caa94b55" download>My résumé (PDF)</a><a href="mailto:mchutham@uwaterloo.ca">Email me</a></div>
+  </section>
+
+  <section class="page section" id="project" aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Projects you can try</h2>
+    <article class="project">
+      <figure class="worksheet">
+        <div class="formula" aria-label="Excel formula in cell B7"><span>B7</span><i aria-hidden="true">ƒx</i><code>=B5-B6</code></div>
+        <table aria-label="Example figures from the budget demo">
+          <thead><tr><td></td><th scope="col">A</th><th scope="col">B</th></tr></thead>
+          <tbody><tr><th scope="row">5</th><td>Total Income</td><td>$2,000</td></tr>
+          <tr><th scope="row">6</th><td>Total Expense</td><td>$1,400</td></tr>
+          <tr><th scope="row">7</th><td>Net Value</td><td class="selected">$600</td></tr></tbody>
+        </table><figcaption>Output sheet · example budget</figcaption>
+      </figure>
+      <div><p class="context">Waterloo · MSCI 100</p>
+        <h3>Personal Finance Planner</h3>
+        <p>I built this for my Management Engineering course. Pick two dates in the workbook and it adds up what came in, what went out, and what’s left. I used VBA so you can enter a transaction through a form.</p>
+        <div class="project-links"><button type="button" data-open="finance" hidden>Try a budget</button><a href="https://github.com/poomravee/excel-personal-finance-manager" target="_blank" rel="noopener noreferrer">Workbook on GitHub</a></div>
       </div>
-      <div class="plot-controls"><div class="modes" role="group" aria-label="Drawing shape">
-        <button type="button" data-mode="Terrain" aria-pressed="true">Terrain</button><button type="button" data-mode="Orbit" aria-pressed="false">Orbit</button><button type="button" data-mode="Wave" aria-pressed="false">Wave</button>
-      </div><label class="phase" for="phase">Phase <input id="phase" type="range" min="0" max="360" step="2" value="0"><output for="phase">0°</output></label></div>
-      <button type="button" class="open-bench" data-open="finance" hidden>Load a project</button>
-    </figure>
+    </article>
+    <article class="project">
+      <figure class="level"><div class="level-img"><img src="assets/lobster-level-one.png" alt="The first forest maze, with a house in the upper left and a narrow bridge leading to the lobster." width="600" height="600" loading="lazy"></div><figcaption>The first of our five levels</figcaption></figure>
+      <div><p class="context">Year 12 · with Wendy Wu</p>
+        <h3>Lobster Hunting</h3>
+        <p>Wendy and I drew the sprites, laid out five forests, and wrote the game in JavaScript. You play as Princess Balana. Getting to the lobster is only half the trip. You still have to get home past the snakes.</p>
+        <div class="project-links"><button type="button" data-open="game" hidden>Play a mini level</button><a href="https://github.com/poomravee/Lobster-Hunting" target="_blank" rel="noopener noreferrer">Game on GitHub</a></div>
+      </div>
+    </article>
   </section>
 
-  <section class="work wrap" id="project" aria-labelledby="work-heading">
-    <h2 id="work-heading">Selected <em>projects.</em></h2>
-    <div class="project-grid">
-      <article>
-        <a class="project-link" href="https://github.com/poomravee/excel-personal-finance-manager" target="_blank" rel="noopener noreferrer" aria-label="View Personal Finance Planner on GitHub">
-          <div class="cover ledger" aria-hidden="true">
-            <div class="sheet"><div class="sheet-title"><span>Personal ledger</span><b>ƒx</b></div>
-              <div class="cells"><div class="ledger-col"><span>Spending</span><span>Savings</span><span>Goals</span></div><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-              <div class="sheet-foot">= SUMIFS ( … )</div>
-            </div><span class="sheet-tab">.XLSM</span>
-          </div>
-          <div class="project-info"><span class="category">Finance tool · Excel / VBA</span><h3>Personal Finance Planner</h3></div>
-        </a>
-        <p class="project-copy">Track spending and savings goals in Excel, with charts and VBA forms for entering transactions.</p>
-        <a class="text-link" href="https://github.com/poomravee/excel-personal-finance-manager" target="_blank" rel="noopener noreferrer">View planner on GitHub</a> <button class="try-project" type="button" data-open="finance" hidden>Try a budget</button>
-      </article>
-      <article>
-        <a class="project-link" href="https://github.com/poomravee/Lobster-Hunting" target="_blank" rel="noopener noreferrer" aria-label="View Lobster Hunting on GitHub">
-          <div class="cover arcade" aria-hidden="true"><div class="cartridge"><div class="screen-title">Lobster Hunting <span>Forest</span></div><img src="assets/notebook/forest.png" width="360" height="200" alt="" loading="lazy"><div class="cart-ribs"><i></i><i></i><i></i></div></div><span class="game-sticker"><img src="assets/lobster-hunting/lobster.png" width="40" height="40" alt="" loading="lazy"></span></div>
-          <div class="project-info"><span class="category">Browser game · JavaScript</span><h3>Lobster Hunting</h3></div>
-        </a>
-        <p class="project-copy">Guide Princess Balana past patrolling snakes, find the lobster, and get home. Wendy Wu and I built all five levels and drew the sprites together.</p>
-        <a class="text-link" href="https://github.com/poomravee/Lobster-Hunting" target="_blank" rel="noopener noreferrer">View game on GitHub</a> <button class="try-project" type="button" data-open="game" hidden>Play a mini level</button>
-      </article>
-    </div>
+  <section class="page section" id="experience" aria-labelledby="experience-heading">
+    <h2 id="experience-heading">Experience</h2>
+    <details class="entry" open><summary><span><strong>KPMG Thailand</strong><small>Audit Innovation Intern · Bangkok</small></span><span class="when">Jun – Aug 2026</span></summary>
+      <div class="detail"><p>I added SQL views to the team’s Power BI reports and built a page for comparing customer and product sales. While building a financial dashboard using SET/mai and Bank of Thailand data, I flagged two ways the SQL exports could cut off or double-count data.</p><p>I also assessed the cost and risks of expanding Microsoft Copilot licenses and shared a recommendation with the partners.</p></div>
+    </details>
+    <div class="entry education"><div><strong>Started at the University of Waterloo</strong><small>BASc, Management Engineering · Waterloo, Ontario</small></div><span class="when">Sep 2025</span></div>
+    <details class="entry"><summary><span><strong>My online shop</strong><small>Founder · E-commerce</small></span><span class="when">Apr 2020 – present</span></summary>
+      <div class="detail"><p>I source beverages and workout supplements from international suppliers, set prices, and handle customer questions myself. The shop brought in over $6,000 in two months and has a 4.95-star customer rating.</p></div>
+    </details>
+    <details class="entry"><summary><span><strong>Maverick Consulting Group</strong><small>Business Consulting Intern · Bangkok</small></span><span class="when">Sep – Dec 2024</span></summary>
+      <div class="detail"><p>I compared pricing, industry reports, and regulations to help the team evaluate new markets. I presented findings each week and worked with embassy and government representatives from Kazakhstan and Peru.</p></div>
+    </details>
+    <details class="entry"><summary><span><strong>Women in Need</strong><small>Operations Associate (Volunteer) · Victoria, BC</small></span><span class="when">Mar 2023 – Jul 2024</span></summary>
+      <div class="detail"><p>I worked the till, helped customers, and sorted donations at the thrift store. Changing how we labeled and grouped donations cut the time it took to find and restock items by 35%.</p></div>
+    </details>
   </section>
 
-  <section class="experience" id="experience" aria-labelledby="exp-heading"><div class="wrap split">
-    <div class="section-side"><h2 id="exp-heading">Experience<em>.</em></h2><p>Analytics, consulting, and the day-to-day work of running a business.</p></div>
-    <div class="entries">
-      <details class="entry" open>
-        <summary><span class="dates">Jun 2026 — Aug 2026</span><span class="position"><strong>KPMG Thailand</strong><span>Audit Trainee</span></span><span class="disclose" aria-hidden="true"></span></summary>
-        <div class="entry-body"><p>Bangkok, Thailand · Audit innovation team · Analytics &amp; AI adoption</p><ul><li>Extended a Power BI reporting framework with standardized SQL views and new data relationships for additional sales datasets.</li><li>Independently designed and built a Compare Sales page to highlight period-over-period changes in customer and product sales.</li><li>Developed a four-page Power BI dashboard for financial ratios and exchange-rate analysis using SET/mai and Bank of Thailand data. Identified SQL export truncation and double-counting risks.</li><li>Developed a Copilot investment assessment for Partner-level leadership, evaluating cost, adoption, potential ROI, and governance risks. Recommended selective license expansion.</li></ul></div>
-      </details>
-      <div class="milestone"><span class="dates">Sep 2025</span><div><strong>Started at Waterloo</strong><p>BASc in Management Engineering</p></div></div>
-      <details class="entry">
-        <summary><span class="dates">Apr 2020 — Present</span><span class="position"><strong>E-commerce business</strong><span>Founder</span></span><span class="disclose" aria-hidden="true"></span></summary>
-        <div class="entry-body"><p>Online retail · Beverages &amp; workout supplements</p><ul><li>Source products, manage inventory and pricing, and run demand-based pricing and promotions. Generated over $6,000 in revenue in two months.</li><li>Maintain a 4.95-star customer rating by handling service inquiries and resolving order issues directly.</li></ul></div>
-      </details>
-      <details class="entry">
-        <summary><span class="dates">Sep 2024 — Dec 2024</span><span class="position"><strong>Maverick Consulting Group</strong><span>Business Consulting Intern</span></span><span class="disclose" aria-hidden="true"></span></summary>
-        <div class="entry-body"><p>Bangkok, Thailand · Strategic advisory · Public affairs &amp; business diplomacy</p><ul><li>Analyzed market and policy information from 10+ sources to develop market-entry and international-expansion strategies, assessing competitors, pricing, and regulatory requirements.</li><li>Engaged with embassy and government representatives from Kazakhstan and Peru to support cross-border business relationships.</li><li>Delivered weekly reports and presentations to senior consultants and the CEO, supporting investment and partnership decisions.</li></ul></div>
-      </details>
-      <details class="entry">
-        <summary><span class="dates">Mar 2023 — Jul 2024</span><span class="position"><strong>Women in Need (WIN)</strong><span>Operations Associate (Volunteer)</span></span><span class="disclose" aria-hidden="true"></span></summary>
-        <div class="entry-body"><p>Victoria, BC · Non-profit thrift store · Community programs</p><ul><li>Processed 50+ customer transactions per shift while managing inventory flow, merchandising, and in-store customer service.</li><li>Improved donation sorting and back-room organization with clearer categorization and labeling, reducing the time spent locating and restocking items by 35%.</li><li>Supported programs for women, trans, and non-binary communities through daily thrift-store operations.</li></ul></div>
-      </details>
-    </div></div>
+  <section id="skills" class="page section skills"><h2>Tools &amp; languages</h2>
+    <dl><dt>Analysis</dt><dd>Python, SQL, Power BI, Excel, VBA</dd><dt>Business &amp; design</dt><dd>Microsoft Copilot, PowerPoint, Figma, Canva</dd><dt>Languages</dt><dd>English, Mandarin Chinese, Thai</dd></dl>
   </section>
-  <section class="about wrap split" id="about" aria-labelledby="about-heading">
-    <div class="section-side"><h2 id="about-heading">About <em>me.</em></h2></div>
-    <div class="about-body"><p class="lead">I’m Marcus Chuthamsatid, a Management Engineering student at the University of Waterloo. I work where analytics, technology, and business meet.</p><p>My experience spans analytics at KPMG Thailand and running an e-commerce business. I enjoy using data and technology to solve practical problems, improve processes, and support better decisions.</p>
-    <div id="skills" class="toolbox"><h3>Tools I use</h3><p><strong>Data &amp; programming</strong><span>Python · SQL · Power BI · Excel · VBA</span></p><p><strong>Business &amp; design</strong><span>Microsoft Copilot · PowerPoint · Figma · Canva</span></p></div></div>
+  <section id="contact" class="page section contact"><h2>Get in touch</h2>
+    <p>I’m open to new opportunities. Have an idea or just want to say hello? Email me at <a href="mailto:mchutham@uwaterloo.ca">mchutham@uwaterloo.ca</a>.</p>
+    <div class="social"><a href="https://www.linkedin.com/in/marcus-chuthamsatid-3b508a31a/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/poomravee" target="_blank" rel="noopener noreferrer">GitHub</a><a href="assets/Marcus-Chuthamsatid-Resume.pdf?v=0ea5caa94b55" download>Résumé PDF</a><a href="tel:+17787006555">778-700-6555</a></div>
   </section>
-
-  <section id="contact" class="contact"><div class="wrap contact-grid"><div>
-    <p class="kicker">Open to new opportunities</p><h2>Let’s <em>connect.</em></h2>
-    <p>Have an opportunity, an idea, or just want to say hello?<br>Feel free to reach out.</p>
-    <a class="email" href="mailto:mchutham@uwaterloo.ca">mchutham@uwaterloo.ca</a></div>
-    <div class="contact-list"><a href="https://www.linkedin.com/in/marcus-chuthamsatid-3b508a31a/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/poomravee" target="_blank" rel="noopener noreferrer">GitHub</a><a href="assets/Marcus-Chuthamsatid-Resume.pdf" download>Résumé PDF</a><a href="tel:+17787006555">778-700-6555</a></div>
-    </div></section>
-
   <dialog id="workbench" aria-labelledby="bench-title">
-    <div class="bench-head"><h2 id="bench-title">Project workbench</h2><button type="button" class="close-bench">Close</button></div>
+    <div class="bench-head"><h2 id="bench-title">Try a project</h2><button type="button" class="close-bench">Close</button></div>
     <div class="bench-inner">
       <div class="bench-switch" role="group" aria-label="Load project"><button type="button" data-load="finance" aria-pressed="true">Finance planner</button><button type="button" data-load="game" aria-pressed="false">Lobster Hunting</button></div>
       <section data-panel="finance" aria-label="Finance planner demo">
-        <h3>A month on paper</h3><p>Try an example budget. Adjust spending to see what you could set aside this month.</p>
+        <h3>Monthly budget</h3><p>Try an example budget. Adjust spending to see what you could set aside this month.</p>
         <div class="budget-strip"><div><small>Example income</small><b>$2,000</b></div><div><small>Available to save</small><b id="savings-total">$600</b></div></div>
         <label for="spend" class="spend-label">Monthly spending <output for="spend" id="spend-total">$1,400</output></label>
         <input id="spend" type="range" min="0" max="2000" step="25" value="1400">
@@ -124,6 +100,6 @@
     </div>
   </dialog>
 </main>
-<footer class="wrap"><span>Marcus Chuthamsatid</span><a href="#top">Back to top</a></footer>
+<footer class="page"><span>Marcus Chuthamsatid</span><a href="#top">Back to top</a></footer>
 </body>
 </html>
